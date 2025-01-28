@@ -115,7 +115,22 @@ a:hover {
     background-color: #ffffff;
     border: 1px solid #0288d1;
     border-radius: 5px;
-    margin
-::contentReference[oaicite:1]{index=1}
- 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
 
+.result-item p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-item img {
+    margin-right: 5px; /* Espace entre l'icône et le texte */
+}
+
+
+ 
