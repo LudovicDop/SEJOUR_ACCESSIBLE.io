@@ -18,6 +18,13 @@
             if (city) {
                 const questionElement = document.getElementById('question');
                 questionElement.textContent = `À ${city}, je veux visiter :`;
+                // Ajouter un champ caché pour transmettre la ville
+                const form = document.querySelector('form');
+                const hiddenInput = document.createElement('input');
+                hiddenInput.type = 'hidden';
+                hiddenInput.name = 'destination';
+                hiddenInput.value = city;
+                form.appendChild(hiddenInput);
             }
         }
 
@@ -42,8 +49,8 @@
 
     <div class="container">
         <h1>Séjour accessible</h1>
-        <form>
-            <label id="question" for="attraction">À [ville], je veux visiter :</label>
+        <form action="search.html" method="get">
+            <label id="question" for="attraction">À [ville], je veux visiter :</label>
             <input type="text" id="attraction" name="attraction" placeholder="Entrez le nom de l'attraction" required>
             <button type="submit">
                 <img src="../icon/loupe.svg" alt="Icône de loupe">
